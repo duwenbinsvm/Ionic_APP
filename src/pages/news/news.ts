@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { NewsinfoPage } from '../newsinfo/newsinfo';
 
 /**
  * Generated class for the NewsPage page.
@@ -28,6 +29,10 @@ export class NewsPage {
     for (var i=0;i<30;i++){
       this.list.push('This is NO. '+i+' data');
     }
+  }
+
+  goInfo(){
+    this.navCtrl.push(NewsinfoPage);
   }
 
   

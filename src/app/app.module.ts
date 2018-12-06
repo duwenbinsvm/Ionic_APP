@@ -21,6 +21,7 @@ import { NewsPage } from '../pages/news/news';
 //ionic app start up 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
+import { NewsinfoPage } from '../pages/newsinfo/newsinfo';
 
 @NgModule({
   declarations: [  /* 声明组件*/
@@ -29,12 +30,16 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     ContactPage,
     HomePage,
     TabsPage,
-    NewsPage
+    NewsPage,
+    NewsinfoPage
   ],
   imports: [  /* 引入的模块，依赖的模块*/
     BrowserModule,
     ComponentsModule,
-    IonicModule.forRoot(MyApp)
+    IonicModule.forRoot(MyApp,{
+      tabsHideOnSubpages: 'true',
+      backButtonText: '返回'
+    })
   ],
   bootstrap: [IonicApp],  /* 启动的模块*/
   entryComponents: [  /*配置不会在模板中使用的组件*/
@@ -43,7 +48,8 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     ContactPage,
     HomePage,
     TabsPage,
-    NewsPage
+    NewsPage,
+    NewsinfoPage
   ],
   providers: [  /*配置服务*/
     StatusBar,
